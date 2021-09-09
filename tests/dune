@@ -1,0 +1,4 @@
+(tests
+  (names strsha)
+  (package alcotest)
+  (libraries alcotest merkle sha stdio))

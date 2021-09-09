@@ -1,0 +1,4 @@
+(library
+  (name merkle)
+  (public_name merkle)
+)
