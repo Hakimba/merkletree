@@ -15,7 +15,7 @@ module StrShaCtx = struct
   let to_string = string_hex_of_hash
   let concat_hashes h1 h2 = hash (String.concat "" [to_string h1; to_string h2])
   
-  (** sha doesn't have equal function, 
+  (* sha doesn't have equal function, 
       contrary to what is written in the mli of the library *)
   let equal h1 h2 = (to_string h1) = (to_string h2)
   
@@ -40,10 +40,6 @@ let print_proof ppf proof = Fmt.pf ppf "Proof : %s"
 let proof_eq p p' = let mapstr = List.map (fun (x,y) -> (StrShaCtx.to_string x,y)) in (mapstr p) = (mapstr p')
 
 let proof_testable = Alcotest.testable print_proof proof_eq
-
-(** ecrire un module de test parametre *)
-
-(** utils data for testing functions *)
 
 let mtree4 =
   "50a504831bd50fee3581d287168a85a8dcdd6aa777ffd0fe35e37290268a0153

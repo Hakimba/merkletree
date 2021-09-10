@@ -12,11 +12,6 @@ A library that represents the Merkle tree data structure in ocaml, the library a
 
 If you just want to build the library : `dune build src/merkle.a`
 
-### Main
-If you want to manually test the library, there is a src directory with a main, just update the main with what you want, i left a main with a some code for a context str/sha256 for MerkleTree that you can directly use.
-
-execute `dune exec src/main.exe`in order to execute the main.
-
 ### Tests
 
 in the "test" folder, there is a test file where unit tests and property tests are written on the Merkle tree library, instantiating it with a particular context.
